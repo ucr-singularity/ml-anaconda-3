@@ -26,18 +26,7 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     /opt/conda/bin/conda install -c soumith magma-cuda90
     /opt/conda/bin/conda clean -ya
     
-    # Clone pytorch
-    cd /opt/
-    git clone https://github.com/pytorch/pytorch.git
-    
-    # Install pytorch and vision
-    cd /opt/pytorch
-    git submodule update --init
-    export PATH=/opt/conda/bin:$PATH
-    TORCH_CUDA_ARCH_LIST="3.5 5.2 6.0 6.1 7.0+PTX" TORCH_NVCC_FLAGS="-Xfatbin -compress-all" \
-    CMAKE_PREFIX_PATH="/opt/conda/" /opt/conda/bin/pip install --no-cache-dir -v .
-    git clone https://github.com/pytorch/vision.git
-    cd vision
-    /opt/conda/bin/pip install --no-cache-dir -v .
+    # Install the released version of Pytorch.
+    /opt/conda/bin/conda install pytorch torchvision cuda90 -c pytorch
 
     echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
