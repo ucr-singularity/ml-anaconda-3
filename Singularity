@@ -40,4 +40,4 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     cd vision
     /opt/conda/bin/pip install -v .
 
-   echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
+    echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
