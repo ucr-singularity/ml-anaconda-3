@@ -30,3 +30,5 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     /opt/conda/bin/conda install pytorch torchvision cuda90 -c pytorch
 
     echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
+    
+    
